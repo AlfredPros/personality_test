@@ -6,6 +6,7 @@ default personality_scoreN = 38
 default personality_scoreO = 8
 
 screen ask_question(var_name, behavior, goto):
+    modal True
     style_prefix "choice"
 
     if behavior == "plus":
