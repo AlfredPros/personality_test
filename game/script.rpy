@@ -46,7 +46,11 @@ label q2:
     "2. Feel little concern for others."
     
     
-label q3:
+label q35:
+    
+    show screen ask_question("personality_scoreA", "minus", "q3")
+    
+    "35. aaaaaaaaaaaaaaaaaaaaaa."
     
     "Total: [personality_scoreE] [personality_scoreA] [personality_scoreC] [personality_scoreN] [personality_scoreO]"
     
