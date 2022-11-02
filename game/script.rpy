@@ -1,33 +1,55 @@
-﻿# The script of the game goes in this file.
+﻿
+default personality_scoreE = 20
+default personality_scoreA = 14
+default personality_scoreC = 14
+default personality_scoreN = 38
+default personality_scoreO = 8
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+screen ask_question(var_name, behavior, goto):
+    style_prefix "choice"
 
-define e = Character("Eileen")
-
-
-# The game starts here.
+    if behavior == "plus":
+        vbox:
+            textbutton "disagree":
+                action SetVariable(var_name, eval(var_name)+1), Hide(), Jump(goto)
+            textbutton "slightly disagree":
+                action SetVariable(var_name, eval(var_name)+2), Hide(), Jump(goto)
+            textbutton "neutral":
+                action SetVariable(var_name, eval(var_name)+3), Hide(), Jump(goto)
+            textbutton "slightly agree":
+                action SetVariable(var_name, eval(var_name)+4), Hide(), Jump(goto)
+            textbutton "agree":
+                action SetVariable(var_name, eval(var_name)+5), Hide(), Jump(goto)
+    else:
+        vbox:
+            textbutton "disagree":
+                action SetVariable(var_name, eval(var_name)-1), Hide(), Jump(goto)
+            textbutton "slightly disagree":
+                action SetVariable(var_name, eval(var_name)-2), Hide(), Jump(goto)
+            textbutton "neutral":
+                action SetVariable(var_name, eval(var_name)-3), Hide(), Jump(goto)
+            textbutton "slightly agree":
+                action SetVariable(var_name, eval(var_name)-4), Hide(), Jump(goto)
+            textbutton "agree":
+                action SetVariable(var_name, eval(var_name)-5), Hide(), Jump(goto)
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
+    
+    show screen ask_question("personality_scoreE", "plus", "q2")
+    
+    "1. Am the life of the party"
+    
+label q2:
+    
+    show screen ask_question("personality_scoreA", "minus", "q3")
+    
+    "2. Feel little concern for others."
+    
+    
+label q3:
+    
+    "Total: [personality_scoreE] [personality_scoreA] [personality_scoreC] [personality_scoreN] [personality_scoreO]"
+    
     return
+            
+    
