@@ -47,10 +47,106 @@ label q2:
     "2. Feel little concern for others."
     
     
-label q3:
+label q19:
     
-    "Total: [personality_scoreE] [personality_scoreA] [personality_scoreC] [personality_scoreN] [personality_scoreO]"
+    show screen ask_question("personality_scoreN", "plus", "q20")
     
-    return
+    "19. Seldom feel blue."
+
+label q20:
+
+    show screen ask_question("personality_scoreO", "minus", "q21")
+    
+    "20. Am not interested in abstract ideas." 
+
+label q21:
+
+    show screen ask_question("personality_scoreE", "plus", "q22")
+    
+    "21. Start conversations. "
+
+label q22:
+
+    show screen ask_question("personality_scoreA", "minus", "q23")
+    
+    "22. Am not interested in other people's problems." 
+
+label q23:
+
+    show screen ask_question("personality_scoreC", "plus", "q24")
+    
+    "23. Get chores done right away."
+
+label q24:
+
+    show screen ask_question("personality_scoreN", "minus", "q25")
+    
+    "24. Am easily disturbed."
+
+label q25:
+
+    show screen ask_question("personality_scoreO", "plus", "q26")
+    
+    "25. Have excellent ideas." 
+
+label q26:
+
+    show screen ask_question("personality_scoreE", "minus", "q27")
+    
+    "26. Have little to say."  
+
+label q27:
+
+    show screen ask_question("personality_scoreA", "plus", "q28")
+    
+    "27. Have a soft heart."  
+
+label q28:
+
+    show screen ask_question("personality_scoreC", "minus", "q29")
+    
+    "28. Often forget to put things back in their proper place." 
+
+label q29:
+
+    show screen ask_question("personality_scoreN", "minus", "q30")
+    
+    "29. Get upset easily."
+
+label q30:
+
+    show screen ask_question("personality_scoreO", "minus", "q31")
+    
+    "30. Do not have a good imagination."
+
+label q31:
+
+    show screen ask_question("personality_scoreE", "plus", "q32")
+    
+    "31. Talk to a lot of different people at parties."
+
+label q32:
+
+    show screen ask_question("personality_scoreA", "minus", "q33")
+    
+    "32. Am not really interested in others."
+
+label q33:
+
+    show screen ask_question("personality_scoreC", "plus", "q34")
+    
+    "33. Like order."
+
+label q34:
+
+    show screen ask_question("personality_scoreN", "minus", "q35")
+    
+    "34. Change my mood a lot."
+
+label q35:
+
+    show screen ask_question("personality_scoreO", "plus", "q36")
+    
+    "35. Am quick to understand things."       
             
     
