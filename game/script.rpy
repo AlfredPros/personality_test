@@ -48,12 +48,103 @@ label q2:
     
 label q35:
     
-    show screen ask_question("personality_scoreA", "minus", "q3")
+    show screen ask_question("personality_scoreO", "plus", "q36")
     
-    "35. aaaaaaaaaaaaaaaaaaaaaa."
+    "35. Am quick to understand things."
+
+label q36:
     
+    show screen ask_question("personality_scoreE", "minus", "q37")
+    
+    "36. Don't like to draw attention to myself."
+
+label q37:
+    
+    show screen ask_question("personality_scoreA", "plus", "q38")
+    
+    "37. Take time out for others."
+
+label q38:
+    
+    show screen ask_question("personality_scoreC", "minus", "q39")
+    
+    "38. Shirk my duties."
+
+label q39:
+    
+    show screen ask_question("personality_scoreN", "minus", "q40")
+    
+    "39. Have frequent mood swings."
+
+label q40:
+    
+    show screen ask_question("personality_scoreO", "plus", "q41")
+    
+    "40. Use difficult words."
+
+label q41:
+    
+    show screen ask_question("personality_scoreE", "plus", "q42")
+    
+    "41. Don't mind being the center of attention."
+
+label q42:
+    
+    show screen ask_question("personality_scoreA", "plus", "q43")
+    
+    "42. Feel others' emotions."
+
+label q43:
+    
+    show screen ask_question("personality_scoreC", "plus", "q44")
+    
+    "43. Follow a schedule."
+
+label q44:
+    
+    show screen ask_question("personality_scoreN", "minus", "q45")
+    
+    "44. Get irritated easily."
+
+label q45:
+    
+    show screen ask_question("personality_scoreO", "plus", "q46")
+    
+    "45.  Spend time reflecting on things."
+
+label q46:
+    
+    show screen ask_question("personality_scoreE", "minus", "q47")
+    
+    "46. Am quiet around strangers."
+
+label q47:
+    
+    show screen ask_question("personality_scoreA", "plus", "q48")
+    
+    "47. Make people feel at ease."
+
+label q48:
+    
+    show screen ask_question("personality_scoreC", "plus", "q49")
+    
+    "48. Am exacting in my work."
+
+label q49:
+    
+    show screen ask_question("personality_scoreN", "minus", "q50")
+    
+    "49. Often feel blue."
+    
+label q50:
+    
+    show screen ask_question("personality_scoreO", "plus", "q51")
+    
+    "50. Am full of ideas."
+
+label q51:
+
     "Total: [personality_scoreE] [personality_scoreA] [personality_scoreC] [personality_scoreN] [personality_scoreO]"
     
     return
-            
     
