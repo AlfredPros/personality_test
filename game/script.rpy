@@ -47,6 +47,10 @@ label q2:
     
     
 label q3:
+
+    show screen ask_question("personality_scoreA", "minus", "q4")
+    
+    "3. Am always prepared "
     
     "Total: [personality_scoreE] [personality_scoreA] [personality_scoreC] [personality_scoreN] [personality_scoreO]"
     
