@@ -46,7 +46,101 @@ label q2:
     
     "2. Feel little concern for others."
     
-	
+label q3:
+
+    show screen ask_question("personality_scoreC", "plus", "q4")
+    
+    "3. Am always prepared."
+    
+label q4:
+    
+    show screen ask_question("personality_scoreN", "minus", "q5")
+    
+    "4. Get stressed out easily."
+    
+label q5:
+    
+    show screen ask_question("personality_scoreO", "plus", "q6")
+    
+    "5. Have a rich vocabulary. "
+
+label q6:
+    
+    show screen ask_question("personality_scoreE", "minus", "q7")
+    
+    "6. Don't talk a lot."
+    
+label q7:
+    
+    show screen ask_question("personality_scoreA", "plus", "q8")
+    
+    "7. Am interested in people."
+
+label q8:
+    
+    show screen ask_question("personality_scoreC", "minus", "q9")
+    
+    "8. Leave my belongings around."
+    
+label q9:
+    
+    show screen ask_question("personality_scoreN", "plus", "q10")
+    
+    "9. Am relaxed most of the time."
+
+label q10:
+    
+    show screen ask_question("personality_scoreO", "minus", "q11")
+    
+    "10. Have difficulty understanding abstract ideas. "
+    
+label q11:
+    
+    show screen ask_question("personality_scoreE", "plus", "q12")
+    
+    "11. Feel comfortable around people."
+    
+label q12:
+    
+    show screen ask_question("personality_scoreA", "minus", "q13")
+    
+    "12. Insult people"
+    
+label q13:
+    
+    show screen ask_question("personality_scoreC", "plus", "q14")
+    
+    "13. Pay attention to details."
+   
+label q14:
+    
+    show screen ask_question("personality_scoreN", "minus", "q15")
+    
+    "14. Worry about things."
+    
+label q15:
+    
+    show screen ask_question("personality_scoreO", "plus", "q16")
+    
+    "15. Have a vivid imagination."
+
+label q16:
+    
+    show screen ask_question("personality_scoreE", "minus", "q17")
+    
+    "16. Keep in the background."
+
+label q17:
+    
+    show screen ask_question("personality_scoreA", "plus", "q18")
+    
+    "17. Sympathize with others' feelings. "
+
+label q18:
+    
+    show screen ask_question("personality_scoreC", "minus", "q19")
+    
+    "18. Make a mess of things."
 
 label q19:
     
@@ -143,7 +237,7 @@ label q34:
     show screen ask_question("personality_scoreN", "minus", "q35")
     
     "34. Change my mood a lot."
-	
+    
 label q35:
     
     show screen ask_question("personality_scoreO", "plus", "q36")
@@ -242,7 +336,7 @@ label q50:
 
 label result:
 
-    "Total: [personality_scoreE] [personality_scoreA] [personality_scoreC] [personality_scoreN] [personality_scoreO]"
+    "Total: E:[personality_scoreE] A:[personality_scoreA] C:[personality_scoreC] N:[personality_scoreN] O:[personality_scoreO]"
     
     return
     
