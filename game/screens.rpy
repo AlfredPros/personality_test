@@ -739,7 +739,7 @@ screen preferences():
 
                     bar value Preference("text speed")
                     
-                    null height (4 * gui.pref_spacing)
+                    null height (2 * gui.pref_spacing)
                     
                     label _("Music Volume")
 

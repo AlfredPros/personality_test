@@ -45,6 +45,14 @@ label start:
     
     stop music fadeout 2
     
+    "Welcome to Big Five Personality Test!"
+    
+    "You will be asked 50 questions and be given 5 choices from agree to disagree."
+    
+    "Please answer them honestly, so we can understand your personality better."
+    
+    "Without further ado, let's begin!"
+    
     show screen ask_question("personality_scoreE", "plus", "q2")
     
     "1. Am the life of the party"
