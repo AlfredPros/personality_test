@@ -4,6 +4,15 @@
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
 ## may want to uncomment them when appropriate.
 
+init python:
+    config.keymap['rollback'].remove('K_PAGEUP')
+    config.keymap['rollback'].remove('repeat_K_PAGEUP')
+    config.keymap['rollback'].remove('K_AC_BACK')
+    config.keymap['rollback'].remove('mousedown_4')
+    
+define config.default_music_volume = 0.5  # 0.7
+define config.default_sfx_volume = 0.5  # 0.7
+
 
 ## Basics ######################################################################
 
@@ -30,6 +39,19 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+                      This app is created by Group 6 Expert System class C UMN
+                      
+                      Our team consists of:{p=0}
+                      - Alfred Kuhlman (00000047678){p=0}
+                      - Bryan Rezki Nugraha (000000){p=0}
+                      - Christian Winarta (00000043902){p=0}
+                      - Hans (000000){p=0}
+                      - Matthew Man Young Leemans (00000052797)
+                      
+                      Our references:{p=0}
+                      - {a=https://openpsychometrics.org/printable/big-five-personality-test.pdf}Open-Source Psychometrics Project{/a}{p=0}
+                      - {a=https://www.kaggle.com/datasets/tunguz/big-five-personality-test}Big Five Personality Test Dataset{/a}{p=0}
+                      - {a=https://www.healthline.com/health/big-five-personality-traits#reliability}Healthline{/a}{p=0}
 """)
 
 
@@ -62,7 +84,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "sparkle.mp3"
 
 
 ## Transitions #################################################################

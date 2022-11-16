@@ -1,4 +1,11 @@
 ﻿
+# E-O: max:40 min:0
+define E_BOUNDARY = 9.7
+define A_BOUNDARY = 27.6
+define C_BOUNDARY = 23.5
+define N_BOUNDARY = 19.4
+define O_BOUNDARY = 28.7
+
 default personality_scoreE = 20
 default personality_scoreA = 14
 default personality_scoreC = 14
@@ -35,6 +42,8 @@ screen ask_question(var_name, behavior, goto):
                 action SetVariable(var_name, eval(var_name)-5), Hide(), Jump(goto)
 
 label start:
+    
+    stop music fadeout 2
     
     show screen ask_question("personality_scoreE", "plus", "q2")
     
@@ -336,7 +345,46 @@ label q50:
 
 label result:
 
-    "Total: E:[personality_scoreE] A:[personality_scoreA] C:[personality_scoreC] N:[personality_scoreN] O:[personality_scoreO]"
+    #"Total: E:[personality_scoreE] A:[personality_scoreA] C:[personality_scoreC] N:[personality_scoreN] O:[personality_scoreO]"
+    
+    "Based on the score, we predict that you..."
+    
+    if personality_scoreE > E_BOUNDARY:  # high
+        "You have a high level of extraversion. That means you,\n- seek excitement or adventure\n- make friends easily"
+        "- speak without thinking\n- and enjoy being active with others"
+    else: # low
+        "You have a low level of extraversion, which means you\n- have a hard time making small talk or introducing yourself"
+        "- feel worn out after socializing\n- avoid large groups\n- and are more reserved"
+        
+    if personality_scoreA > A_BOUNDARY:  # high
+        "You have a high level of agreeableness. That means you,\n- are always ready to help out\n-are caring and honest"
+        "- are interested in the people around you\n- and believe the best about others"
+    else: # low
+        "You have a low level of agreeableness, which means you\n- are stubborn\n- find it difficult to forgive mistakes"
+        "- are self-centered\n- and have less compassion for others"
+        
+    if personality_scoreC > C_BOUNDARY:  # high
+        "You have a high level of conscientiousness. That means you,\n- keep things in order\n- come prepared to school or work"
+        "- are goal-driven\n- and are persistent"
+    else: # low
+        "You have a low level of conscientiousness, which means you\n- are less organized\n- complete tasks in a less structured way"
+        "- take things as they come\n- finish things at the last minute\n- and are impulsive"
+        
+    if personality_scoreN > N_BOUNDARY:  # high
+        "You have a high level of neuroticism. That means you,\n- often feel vulnerable or insecure\n- get stressed easily"
+        "- struggle with difficult situations\n- and have mood swings"
+    else: # low
+        "You have a low level of neuroticism, which means you\n- keep calm in stressful situations\n- are more optimistic"
+        "- worry less\n- and have a more stable mood"
+        
+    if personality_scoreO > O_BOUNDARY:  # high
+        "You have a high level of openness. That means you,\n- enjoy trying new things\n- be more creative"
+        "- have a good imagination\n- and be willing to consider new ideas"
+    else: # low
+        "You have a low level of openness, which means you\n- prefer to do things in a familiar way"
+        "- avoid change\n- and are more traditional in your thinking"
+        
+    "Thanks for taking this test. I hope you have a great day! :D"
     
     return
     
