@@ -21,7 +21,7 @@ define config.default_sfx_volume = 0.5  # 0.7
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("personality_test")
+define config.name = _("Big Five Personality Test")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -59,7 +59,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "personality_test"
+define build.name = "big_five_personality_test"
 
 
 ## Sounds and music ############################################################
@@ -68,9 +68,9 @@ define build.name = "personality_test"
 ## to the player by default. Setting one of these to False will hide the
 ## appropriate mixer.
 
-define config.has_sound = True
+define config.has_sound = False
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
@@ -106,12 +106,12 @@ define config.intra_transition = dissolve
 
 ## A transition that is used after a game has been loaded.
 
-define config.after_load_transition = None
+define config.after_load_transition = dissolve
 
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = None
+define config.end_game_transition = dissolve
 
 
 ## A variable to set the transition used when the game starts does not exist.
