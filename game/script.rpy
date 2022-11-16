@@ -1,6 +1,6 @@
 ﻿
 # E-O: max:40 min:0
-define E_BOUNDARY = 9.7
+define E_BOUNDARY = 19.7
 define A_BOUNDARY = 27.6
 define C_BOUNDARY = 23.5
 define N_BOUNDARY = 19.4
