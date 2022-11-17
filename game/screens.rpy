@@ -247,11 +247,10 @@ screen quick_menu():
             style_prefix "quick"
 
             xalign 0.5
-            yalign 1.0
+            yalign 0.9921875
 
             textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
+            textbutton _("Load") action ShowMenu('load')
             textbutton _("Preferences") action ShowMenu("preferences")
             textbutton _("Main Menu") action MainMenu()
     
@@ -554,6 +553,8 @@ screen about():
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
+                
+            null height gui.pref_spacing
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 

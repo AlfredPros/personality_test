@@ -51,7 +51,7 @@ define gui.about = _p("""
                       Our references:{p=0}
                       - {a=https://openpsychometrics.org/printable/big-five-personality-test.pdf}Open-Source Psychometrics Project{/a}{p=0}
                       - {a=https://www.kaggle.com/datasets/tunguz/big-five-personality-test}Big Five Personality Test Dataset{/a}{p=0}
-                      - {a=https://www.healthline.com/health/big-five-personality-traits#reliability}Healthline{/a}{p=0}
+                      - {a=https://www.healthline.com/health/big-five-personality-traits#reliability}Healthline{/a}
 """)
 
 
