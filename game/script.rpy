@@ -427,7 +427,7 @@ screen stats():
         align(0.325, 0.297)
         ysize 50
         xsize 240
-        value AnimatedValue(value=personality_scoreE, range=40, delay=0.4, old_value=0)
+        value AnimatedValue(value=personality_scoreE, range=40, delay=0.5, old_value=0)
         
     # A
     text "Agreeableness: [A_p]%":
@@ -437,7 +437,7 @@ screen stats():
         align(0.675, 0.297)
         ysize 50
         xsize 240
-        value AnimatedValue(value=personality_scoreA, range=40, delay=0.4, old_value=0)
+        value AnimatedValue(value=personality_scoreA, range=40, delay=0.5, old_value=0)
         
     # C
     text "Conscientiousness: [C_p]%":
@@ -447,7 +447,7 @@ screen stats():
         align(0.325, 0.447)
         ysize 50
         xsize 240
-        value AnimatedValue(value=personality_scoreC, range=40, delay=0.4, old_value=0)
+        value AnimatedValue(value=personality_scoreC, range=40, delay=0.5, old_value=0)
         
     # N
     text "Neuroticism: [N_p]%":
@@ -457,7 +457,7 @@ screen stats():
         align(0.675, 0.447)
         ysize 50
         xsize 240
-        value AnimatedValue(value=personality_scoreN, range=40, delay=0.4, old_value=0)
+        value AnimatedValue(value=personality_scoreN, range=40, delay=0.5, old_value=0)
         
     # O
     text "Openness: [O_p]%":
@@ -467,7 +467,7 @@ screen stats():
         align(0.5, 0.597)
         ysize 50
         xsize 240
-        value AnimatedValue(value=personality_scoreO, range=40, delay=0.4, old_value=0)
+        value AnimatedValue(value=personality_scoreO, range=40, delay=0.5, old_value=0)
 
 label result:
     
