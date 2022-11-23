@@ -98,7 +98,7 @@ style frame:
 screen say(who, what):
     style_prefix "say"
 
-    window:
+    window at :
         id "window"
 
         if who is not None:
@@ -206,11 +206,12 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 screen choice(items):
-    style_prefix "choice"
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
+            textbutton i.caption action i.action:
+                background "choice_idle_background"
+                hover_background "choice_idle_background"
 
 
 style choice_vbox is vbox
@@ -274,6 +275,7 @@ style quick_button:
     properties gui.button_properties("quick_button")
 
 style quick_button_text:
+    outlines [(0.5, "#00000084", absolute(0), absolute(0))]
     properties gui.button_text_properties("quick_button")
 
 

@@ -19,31 +19,63 @@ screen ask_question(var_name, behavior, goto):
     if behavior == "plus":
         vbox:
             textbutton "Disagree":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_1.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)+1), Hide(), Jump(goto)
             textbutton "Slightly disagree":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_2.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)+2), Hide(), Jump(goto)
             textbutton "Neutral":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_3.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)+3), Hide(), Jump(goto)
             textbutton "Slightly agree":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_4.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)+4), Hide(), Jump(goto)
             textbutton "Agree":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_5.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)+5), Hide(), Jump(goto)
     else:
         vbox:
             textbutton "Disagree":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_1.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)-1), Hide(), Jump(goto)
             textbutton "Slightly disagree":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_2.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)-2), Hide(), Jump(goto)
             textbutton "Neutral":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_3.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)-3), Hide(), Jump(goto)
             textbutton "Slightly agree":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_4.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)-4), Hide(), Jump(goto)
             textbutton "Agree":
+                background "gui/button/choice_idle_background.png"
+                hover_background "gui/button/choice_hover_background_5.png"
+                text_hover_color "#202225"
                 action SetVariable(var_name, eval(var_name)-5), Hide(), Jump(goto)
 
 label start:
     
     stop music fadeout 2
+    
+    scene fill with Dissolve(1)
     
     "Welcome to Big Five Personality Test!"
     
@@ -53,7 +85,9 @@ label start:
     
     "Without further ado, let's begin!"
     
-    show screen ask_question("personality_scoreE", "plus", "q2")
+    scene 495521 with Dissolve(1)
+    
+    show screen ask_question("personality_scoreE", "plus", "q2") with Dissolve(0.125)
     
     "1. Am the life of the party"
     
@@ -83,7 +117,9 @@ label q5:
 
 label q6:
     
-    show screen ask_question("personality_scoreE", "minus", "q7")
+    scene 743487 with Dissolve(1)
+    
+    show screen ask_question("personality_scoreE", "minus", "q7") with Dissolve(0.125)
     
     "6. Don't talk a lot."
     
@@ -113,7 +149,9 @@ label q10:
     
 label q11:
     
-    show screen ask_question("personality_scoreE", "plus", "q12")
+    scene 777726 with Dissolve(1)
+    
+    show screen ask_question("personality_scoreE", "plus", "q12") with Dissolve(0.125)
     
     "11. Feel comfortable around people."
     
@@ -143,7 +181,9 @@ label q15:
 
 label q16:
     
-    show screen ask_question("personality_scoreE", "minus", "q17")
+    scene 861598 with Dissolve(1)
+    
+    show screen ask_question("personality_scoreE", "minus", "q17") with Dissolve(0.125)
     
     "16. Keep in the background."
 
@@ -172,8 +212,10 @@ label q20:
     "20. Am not interested in abstract ideas." 
 
 label q21:
+    
+    scene 861665 with Dissolve(1)
 
-    show screen ask_question("personality_scoreE", "plus", "q22")
+    show screen ask_question("personality_scoreE", "plus", "q22") with Dissolve(0.125)
     
     "21. Start conversations. "
 
@@ -202,8 +244,10 @@ label q25:
     "25. Have excellent ideas." 
 
 label q26:
+    
+    scene 861741 with Dissolve(1)
 
-    show screen ask_question("personality_scoreE", "minus", "q27")
+    show screen ask_question("personality_scoreE", "minus", "q27") with Dissolve(0.125)
     
     "26. Have little to say."  
 
@@ -232,8 +276,10 @@ label q30:
     "30. Do not have a good imagination."
 
 label q31:
+    
+    scene 861767 with Dissolve(1)
 
-    show screen ask_question("personality_scoreE", "plus", "q32")
+    show screen ask_question("personality_scoreE", "plus", "q32") with Dissolve(0.125)
     
     "31. Talk to a lot of different people at parties."
 
@@ -263,7 +309,9 @@ label q35:
 
 label q36:
     
-    show screen ask_question("personality_scoreE", "minus", "q37")
+    scene 861908 with Dissolve(1)
+    
+    show screen ask_question("personality_scoreE", "minus", "q37") with Dissolve(0.125)
     
     "36. Don't like to draw attention to myself."
 
@@ -293,7 +341,9 @@ label q40:
 
 label q41:
     
-    show screen ask_question("personality_scoreE", "plus", "q42")
+    scene 862020 with Dissolve(1)
+    
+    show screen ask_question("personality_scoreE", "plus", "q42") with Dissolve(0.125)
     
     "41. Don't mind being the center of attention."
 
@@ -323,8 +373,10 @@ label q45:
 
 label q46:
     
-    show screen ask_question("personality_scoreE", "minus", "q47")
+    scene 862056 with Dissolve(1)
     
+    show screen ask_question("personality_scoreE", "minus", "q47") with Dissolve(0.125)
+     
     "46. Am quiet around strangers."
 
 label q47:
@@ -350,8 +402,76 @@ label q50:
     show screen ask_question("personality_scoreO", "plus", "result")
     
     "50. Am full of ideas."
+    
+    
+screen stats():
+    
+    python:
+        E_p = personality_scoreE/40.0*100.0
+        A_p = personality_scoreA/40.0*100.0
+        C_p = personality_scoreC/40.0*100.0
+        N_p = personality_scoreN/40.0*100.0
+        O_p = personality_scoreO/40.0*100.0
+        
+    
+    text "Your Final Score":
+        align(0.5, 0.125)
+        size 52
+        color "#37342F"
+    
+    # E
+    text "Extraversion: [E_p]%":
+        align(0.3125, 0.25)
+        color "#37342F"
+    bar:
+        align(0.325, 0.297)
+        ysize 50
+        xsize 240
+        value AnimatedValue(value=personality_scoreE, range=40, delay=0.4, old_value=0)
+        
+    # A
+    text "Agreeableness: [A_p]%":
+        align(0.6875, 0.25)
+        color "#37342F"
+    bar:
+        align(0.675, 0.297)
+        ysize 50
+        xsize 240
+        value AnimatedValue(value=personality_scoreA, range=40, delay=0.4, old_value=0)
+        
+    # C
+    text "Conscientiousness: [C_p]%":
+        align(0.3125, 0.4)
+        color "#37342F"
+    bar:
+        align(0.325, 0.447)
+        ysize 50
+        xsize 240
+        value AnimatedValue(value=personality_scoreC, range=40, delay=0.4, old_value=0)
+        
+    # N
+    text "Neuroticism: [N_p]%":
+        align(0.6875, 0.4)
+        color "#37342F"
+    bar:
+        align(0.675, 0.447)
+        ysize 50
+        xsize 240
+        value AnimatedValue(value=personality_scoreN, range=40, delay=0.4, old_value=0)
+        
+    # O
+    text "Openness: [O_p]%":
+        align(0.5, 0.55)
+        color "#37342F"
+    bar:
+        align(0.5, 0.597)
+        ysize 50
+        xsize 240
+        value AnimatedValue(value=personality_scoreO, range=40, delay=0.4, old_value=0)
 
 label result:
+    
+    scene fill with Dissolve(1)
     
     "This is the end of the personality test. Good job for answering all of them!\n\nContinue to know the result."
 
@@ -359,6 +479,7 @@ label result:
     
     "Based on the score, we predict that you..."
     
+    show screen stats 
     
     if personality_scoreE > E_BOUNDARY:  # high
         "You have a high level of extraversion. That means you,\n- Seek excitement or adventure\n- Make friends easily"

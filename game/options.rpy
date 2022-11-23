@@ -13,6 +13,9 @@ init python:
 define config.default_music_volume = 0.5  # 0.7
 define config.default_sfx_volume = 0.5  # 0.7
 
+define config.enter_yesno_transition = Dissolve(.125)
+define config.exit_yesno_transition = Dissolve(.125)
+
 
 ## Basics ######################################################################
 
