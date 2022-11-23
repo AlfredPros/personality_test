@@ -413,6 +413,27 @@ screen stats():
         N_p = personality_scoreN/40.0*100.0
         O_p = personality_scoreO/40.0*100.0
         
+        if (personality_scoreE > E_BOUNDARY):
+            E_c = "#C1FFC1"
+        else:
+            E_c = "#FFC1C1"
+        if (personality_scoreA > A_BOUNDARY):
+            A_c = "#C1FFC1"
+        else:
+            A_c = "#FFC1C1"
+        if (personality_scoreC > C_BOUNDARY):
+            C_c = "#C1FFC1"
+        else:
+            C_c = "#FFC1C1"
+        if (personality_scoreN > N_BOUNDARY):
+            N_c = "#C1FFC1"
+        else:
+            N_c = "#FFC1C1"
+        if (personality_scoreO > O_BOUNDARY):
+            O_c = "#C1FFC1"
+        else:
+            O_c = "#FFC1C1"
+        
     
     text "Your Final Score":
         align(0.5, 0.125)
@@ -421,42 +442,46 @@ screen stats():
     
     # E
     text "Extraversion: [E_p]%":
-        align(0.3125, 0.25)
+        align(0.32, 0.25)
         color "#37342F"
     bar:
+        left_bar Solid(E_c)
         align(0.325, 0.297)
         ysize 50
-        xsize 240
+        xsize 280
         value AnimatedValue(value=personality_scoreE, range=40, delay=0.5, old_value=0)
         
     # A
     text "Agreeableness: [A_p]%":
-        align(0.6875, 0.25)
+        align(0.69, 0.25)
         color "#37342F"
     bar:
+        left_bar Solid(A_c)
         align(0.675, 0.297)
         ysize 50
-        xsize 240
+        xsize 280
         value AnimatedValue(value=personality_scoreA, range=40, delay=0.5, old_value=0)
         
     # C
     text "Conscientiousness: [C_p]%":
-        align(0.3125, 0.4)
+        align(0.32, 0.4)
         color "#37342F"
     bar:
+        left_bar Solid(C_c)
         align(0.325, 0.447)
         ysize 50
-        xsize 240
+        xsize 280
         value AnimatedValue(value=personality_scoreC, range=40, delay=0.5, old_value=0)
         
     # N
     text "Neuroticism: [N_p]%":
-        align(0.6875, 0.4)
+        align(0.68, 0.4)
         color "#37342F"
     bar:
+        left_bar Solid(N_c)
         align(0.675, 0.447)
         ysize 50
-        xsize 240
+        xsize 280
         value AnimatedValue(value=personality_scoreN, range=40, delay=0.5, old_value=0)
         
     # O
@@ -464,9 +489,10 @@ screen stats():
         align(0.5, 0.55)
         color "#37342F"
     bar:
+        left_bar Solid(O_c)
         align(0.5, 0.597)
         ysize 50
-        xsize 240
+        xsize 280
         value AnimatedValue(value=personality_scoreO, range=40, delay=0.5, old_value=0)
 
 label result:
@@ -474,12 +500,10 @@ label result:
     scene fill with Dissolve(1)
     
     "This is the end of the personality test. Good job for answering all of them!\n\nContinue to know the result."
-
-    #"Total score: E=[personality_scoreE] A=[personality_scoreA] C=[personality_scoreC] N=[personality_scoreN] O=[personality_scoreO]"
     
     "Based on the score, we predict that you..."
     
-    show screen stats 
+    show screen stats with Dissolve(0.25)
     
     if personality_scoreE > E_BOUNDARY:  # high
         "You have a high level of extraversion. That means you,\n- Seek excitement or adventure\n- Make friends easily"
