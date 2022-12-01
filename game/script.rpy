@@ -73,8 +73,6 @@ screen ask_question(var_name, behavior, goto):
 
 label start:
     
-    stop music fadeout 2
-    
     scene fill with Dissolve(1)
     
     "Welcome to Big Five Personality Test!"
@@ -600,7 +598,9 @@ label result:
     
     "That's all the test results we've got for you. I hope you understand yourself better now."
     
-    "Thanks for taking this test and have a great day! :D"
+    "To help us know how well our prediction did, we would kindly ask you to fill {a=https://forms.gle/PdAgFZnDvVB8CXat9}an evaluation questionnaire{/a} here."
+    
+    "Have a great day! :D"
     
     return
     

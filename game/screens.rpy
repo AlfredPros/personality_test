@@ -964,7 +964,7 @@ screen keyboard_help():
 
     hbox:
         label _("Escape")
-        text _("Accesses the game menu.")
+        text _("Go back to main menu.")
 
     hbox:
         label _("Ctrl")
@@ -973,14 +973,6 @@ screen keyboard_help():
     hbox:
         label _("Tab")
         text _("Toggles dialogue skipping.")
-
-    hbox:
-        label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Page Down")
-        text _("Rolls forward to later dialogue.")
 
     hbox:
         label "H"
@@ -1011,11 +1003,7 @@ screen mouse_help():
 
     hbox:
         label _("Right Click")
-        text _("Accesses the game menu.")
-
-    hbox:
-        label _("Mouse Wheel Up\nClick Rollback Side")
-        text _("Rolls back to earlier dialogue.")
+        text _("Go back to main menu.")
 
     hbox:
         label _("Mouse Wheel Down")
@@ -1029,10 +1017,6 @@ screen gamepad_help():
         text _("Advances dialogue and activates the interface.")
 
     hbox:
-        label _("Left Trigger\nLeft Shoulder")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
         label _("Right Shoulder")
         text _("Rolls forward to later dialogue.")
 
@@ -1043,7 +1027,7 @@ screen gamepad_help():
 
     hbox:
         label _("Start, Guide")
-        text _("Accesses the game menu.")
+        text _("Go back to main menu.")
 
     hbox:
         label _("Y/Top Button")
